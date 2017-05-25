@@ -1,0 +1,3 @@
+[submodule "jsutils"]
+	path = jsutils
+	url = https://github.com/RodrigoRoaRodriguez/jsutils
