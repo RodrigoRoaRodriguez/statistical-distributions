@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import logo from './logo.svg';
 import Chart from './Chart/Chart';
-import { range, sum } from './utils/Utils';
-import pdfs from './utils/Distributions';
+import { range, sum } from './statistical-distributions/jsutils/index';
+import pdfs from './statistical-distributions/index';
 
 import './App.css';
 
@@ -14,13 +14,12 @@ function getPdfArgs(pdf) {
     case 'normal': return { count, xs, variance: count / 4, mean: count / 2};
     case 'logNormal': return { count, xs, mean: 0, variance: 20 };
     case 'single': return { count, xs, mean: 50, variance: 20 };
-    case 'zipf': return { s: 4 };
+    case 'zipf': return { s: 1 };
     default: return { count, xs, mean: 25, variance: 20 };
   }
 }
 
-const samples = //Object.keys(pdfs)
-['zipf'].map((pdf) => {
+const samples = Object.keys(pdfs).map((pdf) => {
   let ys = xs.map(x => pdfs[pdf](getPdfArgs(pdf))(x));
   ys = ys.map(n => n / sum(ys));
 
