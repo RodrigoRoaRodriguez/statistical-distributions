@@ -1,4 +1,4 @@
-import { range } from './Utils';
+import { range } from './jsutils/index';
 
 const { sqrt, PI, exp, log } = Math;
 const harmonicNumber = (n, m = 1) => range(n).reduce((prev, curr) => prev + 1 / (curr + 1) ** m, 0);
