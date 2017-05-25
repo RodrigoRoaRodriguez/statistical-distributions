@@ -1,5 +1,9 @@
 {
   "name": "statistical-distributions",
-  "version": "0.1.0",
-  "private": true
+  "version": "0.0.0",
+  "description": "Generates synthetic data with different statistical distributions.",
+  "main": "index.js",
+  "repository": "https://github.com/RodrigoRoaRodriguez/statistical-distributions",
+  "author": "Rodrigo Roa Rodríguez <rodrigoroarod@gmail.com>",
+  "license": "Apache-2.0"
 }
