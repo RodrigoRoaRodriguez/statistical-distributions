@@ -1,12 +1,9 @@
 import { range } from './Utils';
 
 const { sqrt, PI, exp, log } = Math;
-const harmonicNumber = n => range(n).reduce((prev, curr) => prev + 1 / (curr + 1), 0);
+const harmonicNumber = (n, m = 1) => range(n).reduce((prev, curr) => prev + 1 / (curr + 1) ** m, 0);
 
 const PDFS = {
-  single: ({ mean = 0 }) => function normal(x) {
-    return x === mean ? mean : 0;
-  },
   normal: ({ mean = 0, variance = 1 }) => function normal(x) {
     return exp(-((x - mean) ** 2) / (2 * variance)) / sqrt(2 * variance * PI);
   },
@@ -27,8 +24,8 @@ const PDFS = {
     return exp(-((log(x) - mean) ** 2) / (2 * variance)) / x / sqrt(variance * 2 * PI);
   },
 
-  zipf: ({ x }) => function zipf(x) {
-    return 1 / (x + 1) / harmonicNumber(x + 1);
+  zipf: ({ s = 1 }) => function zipf(x) {
+    return 1 / (x + 1) ** s / harmonicNumber(x + 1);
   },
   uniform: ({ count }) => function uniform(x) {
     return 1 / count;
