@@ -1,6 +1,6 @@
 {
   "name": "statistical-distributions",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "d3": "^4.8.0",
@@ -22,5 +22,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "Generates synthetic data with different statistical distributions.",
+  "main": "index.js",
+  "repository": "https://github.com/RodrigoRoaRodriguez/statistical-distributions.git",
+  "author": "Rodrigo Roa Rodríguez <rodrigoroarod@gmail.com>",
+  "license": "Apache-2.0"
 }
