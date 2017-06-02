@@ -1,6 +1,6 @@
 import { range } from './jsutils/index';
 
-const { sqrt, PI, exp, log } = Math;
+const { sqrt, PI, exp, log, floor, ceil } = Math;
 const harmonicNumber = (n, m = 1) => range(n).reduce((prev, curr) => prev + 1 / (curr + 1) ** m, 0);
 
 
@@ -33,10 +33,7 @@ export const zipf = ({ s = 1 } = {}) => function zipf(x) {
 export const uniform = ({ count = 1 } = {}) => function uniform(x) {
   return 1 / count;
 };
-export const uniformBimodal = ({ count = 1 } = {}) => function uniformBimodal(x) {
-  return (x < count / 2 ? 2 : 1) / count;
-};
-export const uniformTrimodal = ({ count = 1 } = {}) => function uniformTrimodal(x) {
-  return (x < count / 3 ? 3 : x < 2 * count / 3 ? 2 : 1) / count;
-};
 
+export const uniformRegularMultimodal = ({ count = 1, modes = [1, 2, 3] } = {}) => function uniformMultimodal(x) {
+  return modes[floor(x / (count / modes.length))];
+};
