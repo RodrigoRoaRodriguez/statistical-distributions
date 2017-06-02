@@ -34,6 +34,11 @@ export const uniform = ({ count = 1 } = {}) => function uniform(x) {
   return 1 / count;
 };
 
+export const uniformMultimodal = ({ defaultValue = 0, modes = [{value: 1, condition: (n => n%2)}]  } = {}) => function uniformMultimodal(x, ...rest) {
+  let match = modes.find(mode => mode.condition(x, ...rest));
+  return match ? match.value : defaultValue;
+};
+
 export const uniformRegularMultimodal = ({ count = 1, modes = [1, 2, 3] } = {}) => function uniformMultimodal(x) {
   return modes[floor(x / (count / modes.length))];
 };
