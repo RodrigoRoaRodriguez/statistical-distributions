@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/RodrigoRoaRodriguez/statistical-distributions",
   "author": "Rodrigo Roa Rodríguez <rodrigoroarod@gmail.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "jsutils": "RodrigoRoaRodriguez/jsutils#0.0.1"
+  }
 }
