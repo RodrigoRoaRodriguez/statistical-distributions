@@ -13,7 +13,7 @@
   "author": "Rodrigo Roa Rodríguez <rodrigoroarod@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "jsutils": "github:RodrigoRoaRodriguez/jsutils#v0.0.1"
+    "jsutils": "RodrigoRoaRodriguez/jsutils"
   },
   "devDependencies": {
     "typescript": "^2.5.2"
