@@ -3,10 +3,19 @@
   "version": "0.0.0",
   "description": "Generates synthetic data with different statistical distributions.",
   "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "version": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": "https://github.com/RodrigoRoaRodriguez/statistical-distributions",
   "author": "Rodrigo Roa Rodríguez <rodrigoroarod@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "jsutils": "RodrigoRoaRodriguez/jsutils#0.0.1"
+    "jsutils": "github:RodrigoRoaRodriguez/jsutils#v0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.2"
   }
 }
