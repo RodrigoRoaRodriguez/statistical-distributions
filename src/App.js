@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import logo from './logo.svg';
 import Chart from './Chart/Chart';
-import { range, sum } from './statistical-distributions/jsutils/index';
-import pdfs from './statistical-distributions/index';
+import { range, sum } from 'jsutils';
+import pdfs from 'statistical-distributions';
 
 import './App.css';
 
