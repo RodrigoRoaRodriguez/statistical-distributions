@@ -1,6 +1,6 @@
 {
   "name": "statistical-distributions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generates synthetic data with different statistical distributions.",
   "main": "index.js",
   "types": "index.d.ts",
